@@ -14,6 +14,6 @@ Parque de diversiones programado en C++ utilizando OpenGL y GLUT.
 - [Arribasplata, Luis](https://github.com/SaCSeBaS)
 - Esparza, Jose 
 - Guevara, Miguel
-- Jacobs, Bruno
+- [Jacobs, Bruno](https://github.com/brunojacobs1)
 - Quiroz, Johan
 - Vásquez, Mario
