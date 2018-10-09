@@ -1,8 +1,8 @@
-# Parque de diversiones en OpenGL (padOpenGL)
+﻿# Parque de diversiones en OpenGL (padOpenGL)
 
 [![Image](screenshot.png)](https://www.youtube.com/watch?v=R4qdot4WWYo "YouTube Video")
 
-## Descripcción:
+## Descripción:
 Parque de diversiones programado en C++ utilizando OpenGL y GLUT.
 
 ## libs/headers:
@@ -17,3 +17,4 @@ Parque de diversiones programado en C++ utilizando OpenGL y GLUT.
 - [Jacobs, Bruno](https://github.com/brunojacobs1)
 - [Quiroz, Johan](https://github.com/JohanQuiroz)
 - [Vásquez, Mario](https://github.com/mariovasquez)
+
