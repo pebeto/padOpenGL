@@ -1,7 +1,7 @@
 #ifdef __linux__
     #include <GL/glut.h>
     #define LINUX 1
-    #else
+#else
     #define LINUX 0
     #include <gl/glut.h>
 #endif
@@ -43,15 +43,13 @@ float camPosX= 0;
 float camPosZ= 60; // 5
 float camAngulo= 0;
 
-void inicializar()
-{
+void inicializar(){
     glClearColor(0.529,0.807,0.98, 1.0);
     glEnable(GL_DEPTH_TEST);
     gluQuadricDrawStyle(p,GLU_FILL);
 }
 
-void graficarEjes()
-{
+void graficarEjes(){
     glBegin(GL_LINES);
         glColor3f(1,0,0);
         glVertex3f(0,0,0);
@@ -93,16 +91,14 @@ void reportar(){
     std::cout<<"Swimmer (6 | p): "<<((iniciarAnimacionSwimmer) ? "ON" : "OFF")<<std::endl;
 }
 
-void graficar()
-{
+void graficar(){
     reportar();
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    switch(camaraPosicion)
-    {
+    switch(camaraPosicion){
         case 0:
             gluLookAt(camPosX,2,camPosZ, camPosX+camX,2,camPosZ+camZ, 0,1,0);
         break;
@@ -125,7 +121,6 @@ void graficar()
             gluLookAt(1.21,3,-75.72, 17.55,3,-77.5, 0,1,0);
         break;
     }
-
 
     //graficarEjes();
 
@@ -178,8 +173,7 @@ void graficar()
     glutSwapBuffers();
 }
 
-void redimensionar(int w,int h)
-{
+void redimensionar(int w,int h){
     glViewport(0,0,w,h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -251,13 +245,9 @@ void manejarTeclado(unsigned char key, int x, int y){
             break;
         case '1':
             if(camaraPosicion != 1)
-            {
                 camaraPosicion = 1;
-            }
             else
-            {
                 camaraPosicion = 0;
-            }
             break;
         case '2':
             if(camaraPosicion != 2)
@@ -273,23 +263,15 @@ void manejarTeclado(unsigned char key, int x, int y){
             break;
         case '4':
             if(camaraPosicion != 4)
-            {
                 camaraPosicion = 4;
-            }
             else
-            {
                 camaraPosicion = 0;
-            }
             break;
         case '5':
             if(camaraPosicion != 5)
-            {
                 camaraPosicion = 5;
-            }
             else
-            {
                 camaraPosicion = 0;
-            }
             break;
         case '6':
             if(camaraPosicion != 6)
@@ -297,25 +279,22 @@ void manejarTeclado(unsigned char key, int x, int y){
             else
                 camaraPosicion = 0;
             break;
-
     }
     glutPostRedisplay();
 }
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv){
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(600,400);
     glutInitWindowPosition(100,200);
-    glutCreateWindow("Hola Mundo");
+    glutCreateWindow("Parque de diversiones OpenGL");
 
     inicializar();
 
     glutDisplayFunc(graficar);
     glutReshapeFunc(redimensionar);
     glutKeyboardFunc(manejarTeclado);
-    glutPassiveMotionFunc(manejarMouse);
 
     // SPINER
     glutTimerFunc(1,girarSpiner,1);

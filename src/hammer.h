@@ -10,9 +10,7 @@ bool estado;
 float anguloBaseBrazo= 0;
 float anguloGiratorio= 0;
 
-void hammer(GLUquadricObj *p)
-{
-
+void hammer(GLUquadricObj *p){
     // base
     glPushMatrix();
         glColor3f(0.5, 0.5, 0.5);
@@ -158,7 +156,6 @@ void hammer(GLUquadricObj *p)
             glPopMatrix();
         glPopMatrix();
     glPopMatrix();
-
 }
 
 
