@@ -7,7 +7,7 @@ Parque de diversiones programado en C++ utilizando OpenGL y GLUT.
 
 ## libs/headers:
 - GL
-- GLUT
+- GLUT 
 - math
 
 ## Miembros del grupo:
