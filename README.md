@@ -18,3 +18,5 @@ Parque de diversiones programado en C++ utilizando OpenGL y GLUT.
 - [Quiroz, Johan](https://github.com/JohanQuiroz)
 - [Vásquez, Mario](https://github.com/mariovasquez)
 
+
+
